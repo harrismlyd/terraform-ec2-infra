@@ -12,9 +12,9 @@ resource "aws_instance" "public" {
 }
 
 resource "aws_security_group" "allow_ssh" {
-  name        = "" #Security group name, e.g. jazeel-terraform-security-group
+  name        = "harris-terraform-security-group" #Security group name, e.g. jazeel-terraform-security-group
   description = "Allow SSH inbound"
-  vpc_id      = ""  #VPC ID (Same VPC as your EC2 subnet above), E.g. vpc-xxxxxxx
+  vpc_id      = "vpc-01c494fe1e8787c82"  #VPC ID (Same VPC as your EC2 subnet above), E.g. vpc-xxxxxxx
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
